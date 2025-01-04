@@ -1,11 +1,15 @@
 package card;
 
+import java.util.Random;
+
 public class Card  implements ICard{
     private int value;
     private String suit;
 
     public Card(){
-        value = (int)(Math.random() * 14);
+        Random random = new Random();
+        int value = random.nextInt((13 - 1) + 1) + 1;
+
 
         switch (value) {
             case 1 -> this.suit = "A";
@@ -24,5 +28,10 @@ public class Card  implements ICard{
 
     public String getSuit() {
         return suit;
+    }
+
+    @Override
+    public String toString() {
+        return getValue()+" - "+ getSuit();
     }
 }
