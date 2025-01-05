@@ -4,7 +4,7 @@ import card.Card;
 
 import java.util.ArrayList;
 
-public class Deck implements IDeck {
+public class  Deck implements IDeck {
     private ArrayList<Card> cards;
     private int score;
     private String player;
@@ -25,12 +25,27 @@ public class Deck implements IDeck {
     }
 
     public void getScore() {
-        System.out.println("\nScore: "+this.score);;
+        if (player == "Dealer") {
+            System.out.println("Dealer");
+            System.out.println("Score: " + (this.score - this.cards.get(1).getValue())+"?");
+            return;
+        }
+
+        System.out.println(this.player);
+        System.out.println("Score: "+this.score);;
     }
 
-    public void getCards() {
+
+    public void displayCards() {
+        if (player == "Dealer") {
+            System.out.print("Deck: ");
+            System.out.print("/"+this.cards.get(0).getSuit()+"/ ...");
+            return;
+        }
+
+        System.out.print("Deck: ");
         for(Card card: this.cards) {
-            System.out.print("|"+ card.getValue()+ " - "+card.getSuit()+ "|");;
+            System.out.print("/"+ card.getSuit()+ "/ ");
         }
     }
 }

@@ -6,6 +6,6 @@ import java.util.ArrayList;
 
 public interface IDeck {
     void AddCard(Card card);
-    void getCards();
+    void displayCards();
     void getScore();
 }

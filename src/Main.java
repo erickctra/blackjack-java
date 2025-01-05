@@ -1,11 +1,17 @@
-import Deck.Deck;
+import Deck.*;
 import card.Card;
 
 public class Main {
     public static void main(String[] args) {
-        Deck deck01 = new Deck("Me");
+        Deck playerDeck = new Deck("Me");
+        Deck dealer = new DealerDeck("Dealer");
 
-        deck01.getCards();
-        deck01.getScore();
+        playerDeck.getScore();
+        playerDeck.displayCards();
+
+        System.out.println("\n-------------");
+
+        dealer.getScore();
+        dealer.displayCards();
     }
 }
