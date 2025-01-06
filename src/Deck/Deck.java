@@ -25,11 +25,11 @@ public class  Deck implements IDeck {
     }
 
     public void getScore() {
-        if (player == "Dealer") {
-            System.out.println("Dealer");
-            System.out.println("Score: " + (this.score - this.cards.get(1).getValue())+"?");
-            return;
-        }
+//        if (player == "Dealer") {
+//            System.out.println("Dealer");
+//            System.out.println("Score: " + (this.score - this.cards.get(1).getValue())+"?");
+//            return;
+//        }
 
         System.out.println(this.player);
         System.out.println("Score: "+this.score);;
@@ -37,11 +37,11 @@ public class  Deck implements IDeck {
 
 
     public void displayCards() {
-        if (player == "Dealer") {
-            System.out.print("Deck: ");
-            System.out.print("/"+this.cards.get(0).getSuit()+"/ ...");
-            return;
-        }
+//        if (player == "Dealer") {
+//            System.out.print("Deck: ");
+//            System.out.print("/"+this.cards.get(0).getSuit()+"/ ...");
+//            return;
+//        }
 
         System.out.print("Deck: ");
         for(Card card: this.cards) {
